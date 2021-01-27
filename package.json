@@ -1,0 +1,25 @@
+{
+  "name": "barchartjs",
+  "version": "1.0.0",
+  "description": "Bar chart library to generate barcharts with jQuery ",
+  "main": "barchart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryce-mcmath/barchartjs.git"
+  },
+  "author": "Bryce McMath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bryce-mcmath/barchartjs/issues"
+  },
+  "homepage": "https://github.com/bryce-mcmath/barchartjs#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0"
+  },
+  "dependencies": {
+    "chart.js": "^2.9.4"
+  }
+}

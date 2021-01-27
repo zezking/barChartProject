@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>barChart</title>
+
+    <script src="jquery-3.5.1.js"></script>
+    <script src="barChart.js"></script>
+    <script src="script.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="colorPicker/colorPick.min.js"></script>
+    <link rel="stylesheet" s href="/jquery-ui-barChart.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="barchart.css" />
+    <link rel="stylesheet" href="/colorPicker/colorPick.min.css" />
+  </head>
+
+  <body>
+    <div class="main-content">
+      <div id="tabs">
+        <ul class="main-tabs">
+          <li><a href="#tabs-1">CONTENT</a></li>
+          <li><a href="#tabs-2">DESIGN</a></li>
+        </ul>
+        <div id="contentPanelContainer">
+          <div id="tabs-1">
+            <label for="chart-title">Chart Title</label>
+            <input
+              id="chart-title"
+              type="text"
+              placeholder="Enter a Title"
+              value=""
+            />
+
+            <div class="edit-items-container">
+              <label for="Data">Data</label>
+              <table class="edit-items-table">
+                <tr>
+                  <th class="table-title">item</th>
+                  <th class="table-title">value</th>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      class="label-input"
+                      id="item0"
+                      type="text"
+                      value=""
+                    />
+                  </td>
+                  <td>
+                    <input
+                      class="label-input"
+                      id="value0"
+                      type="text"
+                      value=""
+                    />
+                  </td>
+                  <th></th>
+                </tr>
+              </table>
+              <div class="box bg-1">
+                <button
+                  class="button button--ujarak button--border-thin button--text-thick"
+                  id="addBar"
+                >
+                  add bar
+                </button>
+                <button
+                  class="button button--ujarak button--border-thin button--text-thick"
+                  id="delete"
+                >
+                  delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tabs-2">
+          <label for="style">style</label>
+          <label class="subLabel">Title</label>
+          <div id="titleCustomization">
+            <button class="colorPicker" id="titleColor"></button>
+            <button  id="fontSliderButton">A</button>
+            <input type="range" id="fontSizeSlider" min='12' max='90'></input>
+          </div>
+          <label for="font">font</label>
+
+          <div class="themeSlector">
+            <label for="theme">theme</label>
+            <button class="colorButton" id="color1"></button>
+            <button class="colorButton" id="color2"></button>
+            <button class="colorButton" id="color3"></button>
+          </div>
+        </div>
+      </div>
+      <div id="chart">
+        <h1 class="main-title">default bar chart</h1>
+        <div id="chartContainer"></div>
+      </div>
+    </div>
+  </body>
+</html>

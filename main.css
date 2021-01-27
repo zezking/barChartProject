@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+body {
+  transform: scale(1.2);
+  transform-origin: 1 0;
+}
+h1 {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  top: -3em;
+  position: relative;
+}
+
+.main-content {
+  height: 60.9375em;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-container {
+  padding: 10em;
+  font-family: "Ubuntu", sans-serif;
+}
+
+@media screen and (max-width: 700px) {
+  .main-content {
+    flex-direction: column;
+  }
+}
+
+#tabs {
+  width: 300px;
+  height: 600px;
+  letter-spacing: 0.2em;
+  padding: 2em;
+  margin: 2em;
+}
+
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+#tabs a {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 0.875em;
+}
+
+label {
+  display: block;
+  color: rgba(65, 70, 74, 0.5);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.625em;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding-top: 1em;
+  padding-bottom: 0.75em;
+}
+
+.subLabel {
+  font-weight: 700;
+  color: black;
+  font-size: 0.875em;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 0.1em;
+}
+input[type="text"] {
+  border: none;
+  border-bottom: 2px solid rgba(65, 70, 74, 0.5);
+  font-family: "Ubuntu", sans-serif;
+}
+
+input[type="range"] {
+  width: 100px;
+  background: none;
+}
+
+#titleCustomization {
+  display: flex;
+}
+
+.label-input {
+  width: 6.2815em;
+}
+
+.table-title {
+  font-family: "Ubuntu", sans-serif;
+  text-align: left;
+  font-size: 0.875em;
+}
+.edit-items-container {
+  padding-top: 1em;
+}
+tr {
+  width: 100px;
+}
+.button {
+  font-size: 10px;
+  float: left;
+  min-width: 65px;
+  max-width: 250px;
+  display: block;
+  margin: 1em;
+  padding: 1em 1em;
+  border: none;
+  background: none;
+  color: inherit;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Ubuntu", sans-serif;
+}
+.button:focus {
+  outline: none;
+}
+.button > span {
+  vertical-align: middle;
+}
+
+/* Typography and Roundedness */
+.button--text-upper {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.button--text-thin {
+  font-weight: 300;
+}
+.button--round-s {
+  border-radius: 5px;
+}
+.button--round-m {
+  border-radius: 15px;
+}
+.button--round-l {
+  border-radius: 40px;
+}
+
+.button--border-medium {
+  border: 2px solid;
+}
+.button--border-thick {
+  border: 3px solid;
+}
+
+.box {
+  display: flex;
+  font-size: 10px;
+}
+.button--ujarak {
+  -webkit-transition: border-color 0.4s, color 0.4s;
+  transition: border-color 0.4s, color 0.4s;
+}
+.button--ujarak::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #37474f;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transform: scale3d(0.7, 1, 1);
+  transform: scale3d(0.7, 1, 1);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak.button--round-s::before {
+  border-radius: 2px;
+}
+.button--ujarak.button--inverted::before {
+  background: #7986cb;
+}
+.button--ujarak,
+.button--ujarak::before {
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak:hover {
+  color: #fff;
+  border-color: #37474f;
+}
+.button--ujarak.button--inverted:hover {
+  color: #37474f;
+  border-color: #fff;
+}
+.button--ujarak:hover::before {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.colorButton {
+  height: 36px;
+  width: 36px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border: none;
+  cursor: pointer;
+}
+
+.colorPicker {
+  height: 18px;
+  width: 18px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border: none;
+  cursor: pointer;
+  margin: 0.5em;
+}
+
+#fontSliderButton {
+  height: 18px;
+  width: 18px;
+  background: none;
+  border: solid 1px;
+  font-weight: 900;
+  margin: 0.5em;
+}
+
+.colorPicker:hover {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.colorButton:hover {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.24), 0 8px 25px 0 rgba(0, 0, 0, 0.19);
+}
+
+#color1 {
+  background-image: linear-gradient(
+    to left bottom,
+    #5590e9,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+}
+
+#color2 {
+  background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+}
+
+#color3 {
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
