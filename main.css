@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-
+* {
+  box-sizing: border-box;
+}
 body {
   transform: scale(1.2);
   transform-origin: 1 0;
@@ -7,7 +9,7 @@ body {
 h1 {
   font-family: "Ubuntu", sans-serif;
   text-align: center;
-  font-size: 1em;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   top: -3em;
@@ -22,6 +24,11 @@ h1 {
   align-items: center;
 }
 
+#chart {
+  height: 320px;
+  width: 320px;
+}
+
 .chart-container {
   padding: 10em;
   font-family: "Ubuntu", sans-serif;
@@ -33,35 +40,51 @@ h1 {
   }
 }
 
+#tabs-nav a {
+  display: inline-block;
+  width: 44%;
+  padding: 0.2em 0;
+  margin: 0;
+  text-decoration: none;
+  color: #37474f;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.tabs1.current ~ hr,
+ul li.tabs1:hover ~ hr {
+  margin-left: 0%;
+}
+
+.tabs2.current ~ hr,
+ul li.tabs2:hover ~ hr {
+  margin-left: 50%;
+}
+
 #tabs {
-  width: 300px;
-  height: 600px;
+  width: 320px;
+  height: 363px;
   letter-spacing: 0.2em;
   padding: 2em;
   margin: 2em;
+  border-radius: 5px 5px 5px 5px;
+}
+ul li {
+  display: inline;
+  text-align: center;
+}
+hr {
+  height: 0.25rem;
+  width: 44%;
+  margin: 0;
+  background: #37474f;
+  border: none;
+  transition: 0.3s ease-in-out;
 }
 
-a:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #000000;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-a:hover:after {
-  width: 100%;
-  left: 0;
-}
-
-#tabs a {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  font-size: 0.875em;
+.tab-content {
+  padding: 10px;
+  display: none;
+  background-color: #fff;
 }
 
 label {
@@ -72,8 +95,7 @@ label {
   font-weight: 200;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding-top: 1em;
-  padding-bottom: 0.75em;
+  padding-top: 2em;
 }
 
 .subLabel {
@@ -94,10 +116,14 @@ input[type="range"] {
   background: none;
 }
 
-#titleCustomization {
+#Customization {
   display: flex;
 }
 
+#fontCutomization {
+  display: flex;
+  flex-direction: column;
+}
 .label-input {
   width: 6.2815em;
 }
@@ -109,6 +135,7 @@ input[type="range"] {
 }
 .edit-items-container {
   padding-top: 1em;
+  display: contents;
 }
 tr {
   width: 100px;
@@ -136,31 +163,6 @@ tr {
 }
 .button > span {
   vertical-align: middle;
-}
-
-/* Typography and Roundedness */
-.button--text-upper {
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.button--text-thin {
-  font-weight: 300;
-}
-.button--round-s {
-  border-radius: 5px;
-}
-.button--round-m {
-  border-radius: 15px;
-}
-.button--round-l {
-  border-radius: 40px;
-}
-
-.button--border-medium {
-  border: 2px solid;
-}
-.button--border-thick {
-  border: 3px solid;
 }
 
 .box {
@@ -213,6 +215,16 @@ tr {
   transform: translate3d(0, 0, 0);
 }
 
+select {
+  width: fit-content;
+}
+
+option {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  color: rgba(65, 70, 74, 0.5);
+}
+
 .colorButton {
   height: 36px;
   width: 36px;
@@ -232,21 +244,38 @@ tr {
   margin: 0.5em;
 }
 
-#fontSliderButton {
+#SliderButton {
   height: 18px;
   width: 18px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
   background: none;
   border: solid 1px;
+  border-radius: 3px;
   font-weight: 900;
   margin: 0.5em;
+  cursor: pointer;
+}
+#Customization {
+  display: flex;
+  flex-direction: column;
+}
+
+#cutomizationButton {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#SliderButton:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
 .colorPicker:hover {
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
 .colorButton:hover {
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.24), 0 8px 25px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
 #color1 {

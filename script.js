@@ -3,15 +3,6 @@ let gradientBluePink = "linear-gradient(to right, #33ccff 0%, #ff99cc 100%)";
 let gradientYellowGreen = "linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)";
 let defaultBarColor = "#6699CC"
 
-
-$(function () {
-  $("#tabs").tabs();
-});
-
-$(function () {
-  $("#slider").slider();
-});
-
 $(function () {
   $("#chart-title").on("input", function () {
     // Print entered value in a div box
@@ -25,9 +16,6 @@ $(function () {
   });
 });
 
-$("#fontSlider").click(function () {
-  $("#fontSize").toggle("slow");
-});
 
 $(document).ready(function () {
   const chart1 = $("#chartContainer")
@@ -81,27 +69,68 @@ $(document).ready(function () {
 
     $('#color3').click(function () {
       options1.barColors = [gradientYellowGreen];
-      console.log(options1.barColors)
       $(".chart-container").empty();
       createBarChart(data1, chart1, options1)
     })
   })
 
   $(".colorPicker").colorPick({ 'initialColor': '#2C3E50' });
-  $(".colorPicker").colorPick({
-    'onColorSelected': function () {
-      console.log(this.color)
-      this.element.css({ 'backgroundColor': this.color, 'color': this.color });
-      $('h1').css('color', this.color)
-    }
 
+  $(document).ready(function () {
+
+    $(".colorPicker").colorPick({
+      'onColorSelected': function () {
+        this.element.css({ 'backgroundColor': this.color, 'color': this.color });
+        $('h1').css('color', this.color)
+      }
+    });
+  })
+
+
+  $("#SizeSlider").hide();
+  $("#SliderButton").click(function () {
+    $("#SizeSlider").toggle(80);
   });
-  $("#fontSizeSlider").hide();
-  $("#fontSliderButton").click(function () {
-    $("#fontSizeSlider").toggle([300]);
-  });
+
+
+  $(document).ready(function () {
+    $("#tabs-1").show();
+
+    $('#tabs-nav li').click(function () {
+      $(this).addClass("hide")
+      $('.tab-content').hide();
+      $('#tabs-nav li').removeClass('active');
+      $(this).addClass('active');
+      var activeTab = $(this).find('a').attr('href');
+      $(activeTab).stop().fadeIn(200);
+      return false;
+    });
+  })
+
+  $('ul li a').on('click', function (e) {
+    e.preventDefault();
+    $('ul li').removeClass('current');
+    $(this).parent('li').addClass('current');
+  })
+
+  $(document).ready(function () {
+    $(document).on('input', '#SizeSlider', function () {
+      $("h1").css("font-size", $(this).val() + 'px')
+      console.log($(this).val())
+    });
+  })
+
+  $("#dropdownButton").click(function () {
+    $(".dropdown-content").show();
+  })
+
+  $('#dropdownid').val('selectedvalue');
+
+
 
   const options1 = {
+    width: 320,
+    height: 320,
     barColors: [defaultBarColor],
   }
 })

@@ -9,7 +9,7 @@
     <script src="jquery-3.5.1.js"></script>
     <script src="barChart.js"></script>
     <script src="script.js"></script>
-    <script src="jquery-ui.js"></script>
+   
     <script src="colorPicker/colorPick.min.js"></script>
     <link rel="stylesheet" s href="/jquery-ui-barChart.css" />
     <link rel="stylesheet" href="main.css" />
@@ -20,12 +20,13 @@
   <body>
     <div class="main-content">
       <div id="tabs">
-        <ul class="main-tabs">
-          <li><a href="#tabs-1">CONTENT</a></li>
-          <li><a href="#tabs-2">DESIGN</a></li>
+        <ul id="tabs-nav">
+          <li class= "tabs1 current"><a href="#tabs-1">CONTENT</a></li>
+          <li class= "tabs2"><a href="#tabs-2">DESIGN</a></li>
+          <hr class="underline">
         </ul>
         <div id="contentPanelContainer">
-          <div id="tabs-1">
+          <div id="tabs-1" class=tab-content>
             <label for="chart-title">Chart Title</label>
             <input
               id="chart-title"
@@ -66,29 +67,39 @@
                   class="button button--ujarak button--border-thin button--text-thick"
                   id="addBar"
                 >
-                  add bar
+                  ADD BAR
                 </button>
                 <button
                   class="button button--ujarak button--border-thin button--text-thick"
                   id="delete"
                 >
-                  delete
+                  DELETE
                 </button>
               </div>
             </div>
           </div>
         </div>
-
-        <div id="tabs-2">
+        <div id="tabs-2" class="tab-content">
           <label for="style">style</label>
-          <label class="subLabel">Title</label>
-          <div id="titleCustomization">
-            <button class="colorPicker" id="titleColor"></button>
-            <button  id="fontSliderButton">A</button>
-            <input type="range" id="fontSizeSlider" min='12' max='90'></input>
-          </div>
-          <label for="font">font</label>
 
+          <div id="Customization">
+              <select id="dropdown-content">
+                <option class=customMenu id="barColor" value="barColor">Bar Color</option>
+                <option class=customMenu value="LabelColor">Label Color</option>
+                <option class=customMenu value="widthThick">Width Thickness</option>
+                <option class=customMenu value="tickNumber">Tick Number</option>
+                <option class=customMenu value="barColor"></option>
+                <option class=customMenu value="barColor">height</option>
+                <option class=customMenu value="barColor">width</option>
+              </select>
+            <div id=cutomizationButton>
+              <button class="colorPicker" id="titleColor"></button>
+              <div id="fontCutomization">
+                <button  id="SliderButton">A</button>
+                <input type="range" id="SizeSlider" min='8' max='24'></input>
+              </div>
+            </div>
+          </div>
           <div class="themeSlector">
             <label for="theme">theme</label>
             <button class="colorButton" id="color1"></button>
@@ -97,10 +108,13 @@
           </div>
         </div>
       </div>
-      <div id="chart">
+
+       <div id="chart">
         <h1 class="main-title">default bar chart</h1>
-        <div id="chartContainer"></div>
+      <div id="chartContainer"></div>
       </div>
+      </div>
+     
     </div>
   </body>
 </html>

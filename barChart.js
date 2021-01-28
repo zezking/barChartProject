@@ -3,7 +3,7 @@ let numCharts = 0;
 
 function createBarChart(data, element, options = {}) {
 
-  // Global Variables & Init
+
   numCharts++;
   let el = element;
   let numBars = data.length;
@@ -30,19 +30,6 @@ function createBarChart(data, element, options = {}) {
     width: opt.width,
     height: opt.height
   });
-
-  /* Title: Append child div with class .chart-title and id #chart-[numChart]-title
-   * and add values/CSS settings */
-  // el.append('<div class="chart-title" id="chart-' + numCharts + '-title"><div>' + opt.title + '</div></div>');
-  // $('#chart-' + numCharts + '-title').css({
-  //   color: opt.titleColor,
-  //   width: opt.width,
-  //   height: Math.floor(opt.height / 6),
-  //   background: opt.titleBG,
-  //   'font-size': opt.titleFontSize
-  // });
-
-
   el.append('<div class="chart-ticks" id="chart-' + numCharts + '-ticks"></div>');
   let ticksEl = $('#chart-' + numCharts + '-ticks');
   ticksEl.css({
