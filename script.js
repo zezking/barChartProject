@@ -106,7 +106,6 @@ $(document).ready(function () {
         createBarChart(data1, chart1, options1)
       })
     })
-
     //label Color customization
     $(document).on('click', '#labelColor', function () {
       $(".colorPicker").colorPick({
@@ -118,7 +117,7 @@ $(document).ready(function () {
         }
       });
     });
-
+    //axis Color customization
     $(document).on('click', '#axisColor', function () {
       $(".colorPicker").colorPick({
         'onColorSelected': function () {
@@ -129,7 +128,7 @@ $(document).ready(function () {
         }
       });
     });
-
+    //value Color customization  
     $(document).on('click', '#valueColor', function () {
       $(".colorPicker").colorPick({
         'onColorSelected': function () {
@@ -141,8 +140,17 @@ $(document).ready(function () {
       });
     });
 
-
-
+    //value position customization  
+    $(document).on('click', '#valueColor', function () {
+      $(".colorPicker").colorPick({
+        'onColorSelected': function () {
+          this.element.css({ 'backgroundColor': this.color, 'color': this.color });
+          options1.valColors = [this.color];
+          $(".chart-container").empty();
+          createBarChart(data1, chart1, options1)
+        }
+      });
+    });
 
 
     //title customization
