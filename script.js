@@ -1,7 +1,7 @@
 let gradientGreenBlue = "linear-gradient(to left bottom, #5590e9, #004d7a, #008793, #00bf72,#a8eb12";
 let gradientBluePink = "linear-gradient(to right, #33ccff 0%, #ff99cc 100%)";
 let gradientYellowGreen = "linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)";
-let defaultBarColor = "#6699CC"
+let defaultBarColor = "#2C3E50"
 let data1 = [
   ['Apples', 11],
   ['Oranges', 24],
@@ -59,14 +59,12 @@ $(document).ready(function () {
 
     $('#color1').click(function () {
       options1.barColors = [gradientGreenBlue];
-      console.log(options1.barColors)
       $(".chart-container").empty();
       createBarChart(data1, chart1, options1)
     })
 
     $('#color2').click(function () {
       options1.barColors = [gradientBluePink];
-      console.log(options1.barColors)
       $(".chart-container").empty();
       createBarChart(data1, chart1, options1)
     })
@@ -82,28 +80,72 @@ $(document).ready(function () {
         $(".colorPicker").colorPick({
           'onColorSelected': function () {
             this.element.css({ 'backgroundColor': this.color, 'color': this.color });
-            console.log($(this).val())
             options1.barColors = [this.color];
+            $(".chart-container").empty();
             createBarChart(data1, chart1, options1)
           }
         });
         $("#SizeSlider").attr({ "min": 0.3, "max": 0.9, "step": 0.1 });
         $("#SizeSlider").on('input', function () {
           options1.barSpacing = $(this).val()
+          $(".chart-container").empty();
           createBarChart(data1, chart1, options1)
         })
       });
     })
-    //width customization
-    $(document).on('click', '#width', function () {
-      $("#SizeSlider").attr({ "min": 321, "max": 641 });
 
 
+    //size customization
+    $(document).on('click', '#size', function () {
+      $("#SizeSlider").attr({ "min": 320, "max": 640 });
+      $("#SizeSlider").on('input', function () {
+        options1.width = $(this).val()
+        options1.height = $(this).val()
+        console.log(options1.width);
+        $(".chart-container").empty();
+        createBarChart(data1, chart1, options1)
+      })
+    })
+
+    //label Color customization
+    $(document).on('click', '#labelColor', function () {
+      $(".colorPicker").colorPick({
+        'onColorSelected': function () {
+          this.element.css({ 'backgroundColor': this.color, 'color': this.color });
+          options1.labelColors = [this.color];
+          $(".chart-container").empty();
+          createBarChart(data1, chart1, options1)
+        }
+      });
+    });
+
+    $(document).on('click', '#axisColor', function () {
+      $(".colorPicker").colorPick({
+        'onColorSelected': function () {
+          this.element.css({ 'backgroundColor': this.color, 'color': this.color });
+          options1.axisColor = [this.color];
+          $(".chart-container").empty();
+          createBarChart(data1, chart1, options1)
+        }
+      });
+    });
+
+    $(document).on('click', '#valueColor', function () {
+      $(".colorPicker").colorPick({
+        'onColorSelected': function () {
+          this.element.css({ 'backgroundColor': this.color, 'color': this.color });
+          options1.valColors = [this.color];
+          $(".chart-container").empty();
+          createBarChart(data1, chart1, options1)
+        }
+      });
     });
 
 
 
 
+
+    //title customization
     $(document).on('click', '#title', function () {
       $(".colorPicker").colorPick({
         'onColorSelected': function () {
@@ -122,6 +164,9 @@ $(document).ready(function () {
       height: 320,
       barSpacing: 0.6,
       barColors: [defaultBarColor],
+      labelColors: ['black'],
+      valColors: ['black'],
+      axisColor: ['black']
     }
   })
 
