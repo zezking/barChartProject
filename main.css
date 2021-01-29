@@ -107,8 +107,21 @@ label {
 }
 input[type="text"] {
   border: none;
-  border-bottom: 2px solid rgba(65, 70, 74, 0.5);
+
   font-family: "Ubuntu", sans-serif;
+  width: 10em;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgb(204, 204, 204);
+  transition: all 0.5s ease;
+  position: relative;
+  font-size: 10px;
+  color: #474747;
+  height: 16px;
+  text-align: left;
+  letter-spacing: normal;
+  padding: 3px;
 }
 
 input[type="range"] {
@@ -189,6 +202,7 @@ tr {
   transition: transform 0.4s, opacity 0.4s;
   -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  border-radius: 5px;
 }
 .button--ujarak.button--round-s::before {
   border-radius: 2px;
@@ -215,16 +229,85 @@ tr {
   transform: translate3d(0, 0, 0);
 }
 
-select {
-  width: fit-content;
+.dropdown {
+  width: 79px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgb(204, 204, 204);
+  transition: all 0.5s ease;
+  position: relative;
+  font-size: 10px;
+  color: #474747;
+  height: 100%;
+  text-align: left;
+  letter-spacing: normal;
+}
+.dropdown .select {
+  cursor: pointer;
+  /* display: inline; */
+  padding: 5px;
+  font-size: 10px;
+}
+.dropdown .select > i {
+  font-size: 0.875em;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  float: left;
+  line-height: 20px;
+}
+.dropdown:hover {
+  box-shadow: 0 0 4px rgb(204, 204, 204);
+}
+.dropdown:active {
+  background-color: #f8f8f8;
+}
+.dropdown.active:hover,
+.dropdown.active {
+  box-shadow: 0 0 4px rgb(204, 204, 204);
+  border-radius: 2px 2px 0 0;
+  background-color: #f8f8f8;
+}
+.dropdown.active .select > i {
+  transform: rotate(-90deg);
+}
+.dropdown .dropdown-menu {
+  position: absolute;
+  background-color: #fff;
+  display: inline-flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  margin-top: 1px;
+  box-shadow: 0 1px 2px rgb(204, 204, 204);
+  border-radius: 0 1px 2px 2px;
+  overflow: hidden;
+  display: none;
+  z-index: 9;
+}
+.dropdown .dropdown-menu li {
+  padding: 5px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+}
+.dropdown .dropdown-menu {
+  padding: 0;
+  list-style: none;
+}
+.dropdown .dropdown-menu li:hover {
+  background-color: #f2f2f2;
+}
+.dropdown .dropdown-menu li:active {
+  background-color: #e2e2e2;
 }
 
-option {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  color: rgba(65, 70, 74, 0.5);
+#dropdown-content {
+  margin-top: 0.5625em;
 }
-
 .colorButton {
   height: 36px;
   width: 36px;
@@ -235,18 +318,20 @@ option {
 }
 
 .colorPicker {
-  height: 18px;
-  width: 18px;
+  height: 36px;
+  width: 36px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   border: none;
   cursor: pointer;
   margin: 0.5em;
+  margin-left: 0;
+  border-radius: 3px;
 }
 
 #SliderButton {
-  height: 18px;
-  width: 18px;
+  height: 36px;
+  width: 36px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   background: none;
@@ -254,6 +339,7 @@ option {
   border-radius: 3px;
   font-weight: 900;
   margin: 0.5em;
+  margin-left: 0;
   cursor: pointer;
 }
 #Customization {
@@ -287,10 +373,12 @@ option {
     #00bf72,
     #a8eb12
   );
+  border-radius: 3px;
 }
 
 #color2 {
   background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+  border-radius: 3px;
 }
 
 #color3 {
@@ -299,4 +387,5 @@ option {
     rgba(34, 193, 195, 1) 0%,
     rgba(253, 187, 45, 1) 100%
   );
+  border-radius: 3px;
 }

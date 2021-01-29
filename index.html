@@ -1,119 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>barChart</title>
 
-    <script src="/jquery-3.5.1.js"></script>
-    <script src="/barChart.js"></script>
-    <script src="/script.js"></script>
-   
-    <script src="/colorPicker/colorPick.min.js"></script>
-    <link rel="stylesheet" href="/main.css" />
-    <link rel="stylesheet" href="/barchart.css" />
-    <link rel="stylesheet" href="/colorPicker/colorPick.min.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>barChart</title>
 
-  <body>
-    <div class="main-content">
-      <div id="tabs">
-        <ul id="tabs-nav">
-          <li class= "tabs1 current"><a href="#tabs-1">CONTENT</a></li>
-          <li class= "tabs2"><a href="#tabs-2">DESIGN</a></li>
-          <hr class="underline">
-        </ul>
-        <div id="contentPanelContainer">
-          <div id="tabs-1" class=tab-content>
-            <label for="chart-title">Chart Title</label>
-            <input
-              id="chart-title"
-              type="text"
-              placeholder="Enter a Title"
-              value=""
-            />
+  <script src="/jquery-3.5.1.js"></script>
+  <script src="/barChart.js"></script>
+  <script src="/script.js"></script>
 
-            <div class="edit-items-container">
-              <label for="Data">Data</label>
-              <table class="edit-items-table">
-                <tr>
-                  <th class="table-title">item</th>
-                  <th class="table-title">value</th>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      class="label-input"
-                      id="item0"
-                      type="text"
-                      value=""
-                    />
-                  </td>
-                  <td>
-                    <input
-                      class="label-input"
-                      id="value0"
-                      type="text"
-                      value=""
-                    />
-                  </td>
-                  <th></th>
-                </tr>
-              </table>
-              <div class="box bg-1">
-                <button
-                  class="button button--ujarak button--border-thin button--text-thick"
-                  id="addBar"
-                >
-                  ADD BAR
-                </button>
-                <button
-                  class="button button--ujarak button--border-thin button--text-thick"
-                  id="delete"
-                >
-                  DELETE
-                </button>
-              </div>
+  <script src="/colorPicker/colorPick.min.js"></script>
+  <link rel="stylesheet" href="/main.css" />
+  <link rel="stylesheet" href="/barchart.css" />
+  <link rel="stylesheet" href="/colorPicker/colorPick.min.css" />
+</head>
+
+<body>
+  <div class="main-content">
+    <div id="tabs">
+      <ul id="tabs-nav">
+        <li class="tabs1 current"><a href="#tabs-1">CONTENT</a></li>
+        <li class="tabs2"><a href="#tabs-2">DESIGN</a></li>
+        <hr class="underline">
+      </ul>
+      <div id="contentPanelContainer">
+        <div id="tabs-1" class=tab-content>
+          <label for="chart-title">Chart Title</label>
+          <input id="chart-title" type="text" placeholder="Enter a Title" value="" />
+
+          <div class="edit-items-container">
+            <label for="Data">Data</label>
+            <table class="edit-items-table">
+              <tr>
+                <th class="table-title">item</th>
+                <th class="table-title">value</th>
+              </tr>
+              <tr>
+                <td>
+                  <input class="label-input" id="item0" type="text" value="" />
+                </td>
+                <td>
+                  <input class="label-input" id="value0" type="text" value="" />
+                </td>
+                <th></th>
+              </tr>
+            </table>
+            <div class="box bg-1">
+              <button class="button button--ujarak button--border-thin button--text-thick" id="addBar">
+                ADD BAR
+              </button>
+              <button class="button button--ujarak button--border-thin button--text-thick" id="delete">
+                DELETE
+              </button>
             </div>
           </div>
         </div>
-        <div id="tabs-2" class="tab-content">
-          <label for="style">style</label>
+      </div>
+      <div id="tabs-2" class="tab-content">
+        <label for="style">style</label>
 
-          <div id="Customization">
-              <select id="dropdown-content">
-                <option class=customMenu id="barColor" value="barColor">Bar Color</option>
-                <option class=customMenu value="LabelColor">Label Color</option>
-                <option class=customMenu value="widthThick">Width Thickness</option>
-                <option class=customMenu value="tickNumber">Tick Number</option>
-                <option class=customMenu value="barColor"></option>
-                <option class=customMenu value="barColor">height</option>
-                <option class=customMenu value="barColor">width</option>
-              </select>
-            <div id=cutomizationButton>
-              <button class="colorPicker" id="titleColor"></button>
-              <div id="fontCutomization">
-                <button  id="SliderButton">A</button>
-                <input type="range" id="SizeSlider" min='8' max='24'></input>
+        <div id="Customization">
+          <div id="dropdown-content">
+            <div class="dropdown">
+              <div class="select">
+                <span>select</span>
+                <i class="fa fa-chevron-left"></i>
               </div>
+              <input type="hidden" name="feature ">
+              <ul class="dropdown-menu">
+                <li id="title">title</li>
+                <li id="width">width</li>
+                <li id="height">height</li>
+                <li id="bar">bar</li>
+              </ul>
             </div>
           </div>
-          <div class="themeSlector">
-            <label for="theme">theme</label>
-            <button class="colorButton" id="color1"></button>
-            <button class="colorButton" id="color2"></button>
-            <button class="colorButton" id="color3"></button>
+          <div id=cutomizationButton>
+            <button class="colorPicker" id="titleColor"></button>
+            <div id="fontCutomization">
+              <button id="SliderButton">A</button>
+              <input type="range" id="SizeSlider" min='???' max='???'></input>
+            </div>
           </div>
         </div>
+        <div class="themeSlector">
+          <label for="theme">theme</label>
+          <button class="colorButton" id="color1"></button>
+          <button class="colorButton" id="color2"></button>
+          <button class="colorButton" id="color3"></button>
+        </div>
       </div>
-
-       <div id="chart">
-        <h1 class="main-title">default bar chart</h1>
-      <div id="chartContainer"></div>
-      </div>
-      </div>
-     
     </div>
-  </body>
+
+    <div id="chart">
+      <h1 class="main-title">default bar chart</h1>
+      <div id="chartContainer"></div>
+    </div>
+  </div>
+
+  </div>
+</body>
+
 </html>
