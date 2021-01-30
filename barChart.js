@@ -167,7 +167,7 @@ function createBarChart(data, element, options = {}) {
         labelColor = opt.labelColors[i - 1];
       }
 
-      // Dynamic CSS
+
       labelEl.css({
         width: opt.barWidth,
         left: left,
@@ -175,7 +175,7 @@ function createBarChart(data, element, options = {}) {
         'font-size': opt.barWidth * 0.2
       });
 
-      // Increment the positioning
+
       left += space + opt.barWidth;
     }
   };
@@ -183,7 +183,7 @@ function createBarChart(data, element, options = {}) {
 
   function appendBars(opt, values, maxBarHeight, chartEl) {
 
-    // Calculating the space between each bar
+
     let space = (chartEl.width() - opt.barWidth * values.length) / (values.length + 1);
 
 
@@ -212,7 +212,7 @@ function createBarChart(data, element, options = {}) {
         barColor = opt.barColors[i - 1];
       }
 
-      // Adding dynamic css
+
       barEl.css({
         width: opt.barWidth,
         left: left,
