@@ -1,8 +1,9 @@
 <h1>About</h1>
+
 <p> This is a bar Chart Project for the prep module of Lighthouse Labs Bootcamp</p>
 
-#Usage
+<h1>Purpose</h1>
 
-#Screenshots
+<h1>Screen Shots</h1>
 
-#API Function
+<h1>Features</h1>
