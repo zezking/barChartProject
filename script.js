@@ -141,15 +141,21 @@ $(document).ready(function () {
     });
 
     //value position customization  
-    $(document).on('click', '#valueColor', function () {
-      $(".colorPicker").colorPick({
-        'onColorSelected': function () {
-          this.element.css({ 'backgroundColor': this.color, 'color': this.color });
-          options1.valColors = [this.color];
-          $(".chart-container").empty();
+    $(document).on('click', '#valuePos', function () {
+      $("#SizeSlider").attr({ "min": 1, "max": 3, "step": 1 });
+      $("#SizeSlider").on('input', function () {
+        if ($(this).val() === 1) {
+          options1.valPos = ['top']
+          createBarChart(data1, chart1, options1)
+        } else if ($(this).val() === 2) {
+          options1.valPos = ['center']
+          createBarChart(data1, chart1, options1)
+        } else if ($(this).val === 3) {
+          options1.valPos = ["bottom"]
           createBarChart(data1, chart1, options1)
         }
-      });
+
+      })
     });
 
 
@@ -174,7 +180,8 @@ $(document).ready(function () {
       barColors: [defaultBarColor],
       labelColors: ['black'],
       valColors: ['black'],
-      axisColor: ['black']
+      axisColor: ['black'],
+      valPos: ['bottom']
     }
   })
 
