@@ -10,7 +10,7 @@ This project is attempt to create a simple bar chart generator API and experimen
 
 ## Screen Shots
 
-### main page
+### Main Page
 
 ![main interface](./screenshots/1.png)
 
