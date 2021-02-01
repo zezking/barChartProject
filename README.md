@@ -44,7 +44,7 @@ This project is attempt to create a simple bar chart generator API and experimen
 - bar, axis, value, label color cutomization
 - bar chart size, bar spacing cutomization
 
-## issues
+## Issues
 
 - No default bar generated when user visit the main page
 - The test interface does not have a valid input table, user has to delete each - bar one by one
