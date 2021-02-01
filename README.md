@@ -8,7 +8,7 @@ This is a bar Chart Project for the prep module of Lighthouse Labs Bootcamp
 
 This project is attempt to create a simple bar chart generator API and experiments with UI/UX design with HTML, CSS, Javascript and jQuery
 
-## Screen Shots
+## Screenshots
 
 ### Main Page
 
