@@ -1,9 +1,21 @@
-<h1>About</h1>
+# Bar Chart Project
 
-<p> This is a bar Chart Project for the prep module of Lighthouse Labs Bootcamp</p>
+## About
 
-<h1>Purpose</h1>
+This is a bar Chart Project for the prep module of Lighthouse Labs Bootcamp
 
-<h1>Screen Shots</h1>
+# The largest heading
 
-<h1>Features</h1>
+## The second largest heading
+
+This project is attempt to create a simple bar chart generator API and experiments with UI/UX design with HTML, CSS, JAVASCRIPT and jQuery
+
+Screen Shots
+
+Features
+
+issues
+
+Features in Progress
+
+External resources
