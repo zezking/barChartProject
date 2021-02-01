@@ -59,9 +59,9 @@ This project is attempt to create a simple bar chart generator API and experimen
 
 ## External resources
 
-[color Picker](https://github.com/philzet/ColorPick.js)
-[jQuery UI Documentation](https://api.jqueryui.com/)
-[jQuery Documentation](https://api.jquery.com/)
-[Hosam Dahrooge's bar chart example](https://github.com/Just-Hosam/barChartStretch)
-[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[w3Schools](https://www.w3schools.com/)
+- [color Picker](https://github.com/philzet/ColorPick.js)
+- [jQuery UI Documentation](https://api.jqueryui.com/)
+- [jQuery Documentation](https://api.jquery.com/)
+- [Hosam Dahrooge's bar chart example](https://github.com/Just-Hosam/barChartStretch)
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [w3Schools](https://www.w3schools.com/)
