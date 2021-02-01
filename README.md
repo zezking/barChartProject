@@ -11,6 +11,12 @@ This project is attempt to create a simple bar chart generator API and experimen
 ## Screen Shots
 
 ![main interface](./screenshots/1.png)
+![main interface](./screenshots/2.png)
+![main interface](./screenshots/3.png)
+![main interface](./screenshots/4.png)
+![main interface](./screenshots/5.png)
+![main interface](./screenshots/6.png)
+![main interface](./screenshots/7.png)
 
 ## Features
 
