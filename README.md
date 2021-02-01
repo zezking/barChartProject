@@ -14,16 +14,16 @@ This project is attempt to create a simple bar chart generator API and experimen
 
 ## issues
 
--No default bar generated when user visit the main page
--The test interface does not have a valid input table, user has to delete each -bar one by one
--The bar will crash If user input a larger number for height and width
--Did not get ticks customization to work
+- No default bar generated when user visit the main page
+- The test interface does not have a valid input table, user has to delete each - bar one by one
+- The bar will crash If user input a larger number for height and width
+- Did not get ticks customization to work
 
 ## Features in Progress
 
--axis label customization
--Number of ticks cutomization
--mobile friendly (responsive) UI
+- axis label customization
+- Number of ticks cutomization
+- mobile friendly (responsive) UI
 
 ## External resources
 
