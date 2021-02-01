@@ -10,12 +10,32 @@ This project is attempt to create a simple bar chart generator API and experimen
 
 ## Screen Shots
 
+###### main page
+
 ![main interface](./screenshots/1.png)
+
+###### Title, item and value input
+
 ![main interface](./screenshots/2.png)
+
+###### Theme select
+
 ![main interface](./screenshots/3.png)
+
+###### color pickers
+
 ![main interface](./screenshots/4.png)
+
+###### select features to customize
+
 ![main interface](./screenshots/5.png)
+
+###### axis color customization
+
 ![main interface](./screenshots/6.png)
+
+###### bar size customization
+
 ![main interface](./screenshots/7.png)
 
 ## Features
