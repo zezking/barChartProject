@@ -10,7 +10,13 @@ This project is attempt to create a simple bar chart generator API and experimen
 
 ## Screen Shots
 
+![main interface](./screenshots/1.png)
+
 ## Features
+
+- Real time title edit and color cutomization
+- bar, axis, value, label color cutomization
+- bar chart size, bar spacing cutomization
 
 ## issues
 
