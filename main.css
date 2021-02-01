@@ -4,7 +4,12 @@
 }
 body {
   transform: scale(1.2);
-  transform-origin: 1 0;
+  background-color: hsl(185, 75%, 39%);
+  background-image: url("../background-img/bg-pattern-top.svg"),
+    url("../background-img/bg-pattern-bottom.svg");
+  background-position: -300px -470px, 1300px 600px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 h1 {
   font-family: "Ubuntu", sans-serif;
@@ -12,8 +17,10 @@ h1 {
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  top: -3em;
+  top: 2em;
   position: relative;
+  background: white;
+  border-radius: 5px;
 }
 
 .main-content {
@@ -25,13 +32,17 @@ h1 {
 }
 
 #chart {
-  height: 320px;
-  width: 320px;
+  height: 364px;
+  width: 352px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 7px 9px 21px -8px rgba(0, 0, 0, 0.75);
 }
 
 .chart-container {
   padding: 10em;
   font-family: "Ubuntu", sans-serif;
+  top: 24px;
 }
 
 @media screen and (max-width: 700px) {
@@ -65,8 +76,11 @@ ul li.tabs2:hover ~ hr {
   height: 363px;
   letter-spacing: 0.2em;
   padding: 2em;
+  padding-left: 45px;
   margin: 2em;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 7px 9px 21px -8px rgba(0, 0, 0, 0.75);
 }
 ul li {
   display: inline;
