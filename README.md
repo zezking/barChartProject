@@ -1,5 +1,7 @@
 # Bar Chart Project
 
+[Click Here to preview](https://zezking.github.io/barChartProject/)
+
 ## About
 
 This is a bar Chart Project for the prep module of Lighthouse Labs Bootcamp
