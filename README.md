@@ -1,5 +1,7 @@
 # Bar Chart Project
 
+Clone to local repository and use live server for a preview
+
 ## About
 
 This is a bar Chart Project for the prep module of Lighthouse Labs Bootcamp
